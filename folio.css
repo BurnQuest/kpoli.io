@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #EDEEC0; }
+
+#canvas {
+  float: left;
+  width: 100%; }
+
+.responsive-canvas .konvajs-content {
+  background: yellow;
+  width: 100% !important;
+  height: auto !important;
+  padding-bottom: 75%; }
+  .responsive-canvas .konvajs-content canvas {
+    width: 100% !important;
+    height: 100% !important; }
+
+/*# sourceMappingURL=folio.css.map */
