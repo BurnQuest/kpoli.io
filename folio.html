@@ -101,7 +101,7 @@
             shadowBlur: 70,
             shadowOffset: {x : 10, y : 10},
             shadowOpacity: 0.5,
-        opacity: 1,
+        opacity: 0.9,
 
     });
 
@@ -130,7 +130,7 @@
       wrap: 'word',
       align: 'center',
       fontSize: 15,
-      fontFamily: 'Courier',
+      fontFamily: 'Helvetica',
       fill: LOCAL_LIGHT,
       padding: 7,
     });
@@ -144,7 +144,7 @@
       align: 'center',
       text: '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSoftware | Film | Animation',
       fontSize: 15,
-      fontFamily: 'Courier',
+      fontFamily: 'Helvetica',
       fontStyle: 'italic',
       fontWeight: 'light',
       fill: LOCAL_DARK,
@@ -202,8 +202,8 @@ for(var i = 0; i < 4; i++){
 //anonymous function for scoping, this tricked me for a while
   (function (){
   var wind2 = wind.clone({
-    x: -window.innerWidth +550,
-    y: -window.innerHeight + 550,
+    x: -window.innerWidth + 500 + 20*i,
+    y: -window.innerHeight + 700 + 30*i,
   });
   wind2.find('.label').setAttr('text',labelfills[i]);
   wind2.find('.body').setAttrs({
@@ -211,20 +211,30 @@ for(var i = 0; i < 4; i++){
     align: 'left',
 
   });
+  //faux terminal window
   if(i == 3){
-    wind2.find('.windowbacking').setAttr('fill',LOCAL_DARK);
+    wind2.find('.windowbacking').setAttrs({
+      fill: LOCAL_DARK,
+      stroke: LOCAL_DARK,
+          strokeWidth: 2,
+
+    });
+
     wind2.find('.body').setAttrs({
       fill: LOCAL_LIGHT,
       fontSize: 18,
-      lineHeight: 1.6,
+      fontWeight: 'light',
+      lineHeight: 1.2,
+
     });
     wind2.find('.menubar').setAttrs({
+      opacity: 0.1,
       shadowColor: 'black',
           shadowBlur: 70,
           shadowOffset: {x : 2, y : 2},
-          shadowOpacity: 0.4,
+          shadowOpacity: 0.0,
     });
-    wind2.cache();
+
 
 
 
