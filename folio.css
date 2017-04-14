@@ -2,7 +2,9 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #EDEEC0; }
+  background-image: url("bg.png");
+  background-repeat: reapeat-xy;
+}
 
 #canvas {
   float: left;
